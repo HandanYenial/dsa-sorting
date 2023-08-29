@@ -32,7 +32,7 @@ function bubbleSort(arr) {
           
 
             if(arr[j] > arr[j+1]){ //check if the current element is greater than the next element
-                let temp = arr[j]; //let temproray variable to store the current element
+                let temp = arr[j]; //let temporary variable to store the current element
                 arr[j] = arr[j+1]; //swap the current element with the next element
                 arr[j+1] = temp; //swap the next element with the current element
                 swapped = true; //set the swapped to true
