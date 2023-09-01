@@ -3,7 +3,7 @@ Given two sorted arrays, write a function called merge which accepts two sorted 
 from both arrays sorted.
 
 This function should run in O(n + m) time and O(n + m) space and should not modify the parameters passed to it.
-Also, do not use the built in .sort() method! We’re going to use this function to implement a sort, 
+Also, do not use the built-in .sort() method! We’re going to use this function to implement a sort, 
 so the helper itself shouldn’t depend on a sort.
 
 let arr1 = [1,3,4,5];
@@ -25,22 +25,22 @@ merge(arr5,arr6) // [1,2,3,4,5] */
 
 
 function merge(arr1,arr2) {//it accepts two sorted arrays arr1 and arr2
-    const results =[]; //create an empty OUT array to store the result
-    let i = 0; //create a pointer for arr1
-    let j = 0; //create a pointer for arr2
+    const results =[];     //create an empty OUT array to store the result
+    let i = 0;             //create a pointer for arr1
+    let j = 0;            //create a pointer for arr2
 
-    while(i < arr1.length && j< arr2.length){ //loop through the array until the pointer reaches the end of the array
-        if(arr1[i] < arr2[j]){//if the element in the first array is smaller than the element in the second array 
-            results.push(arr1[i]);//push the element in the first array to the OUT array
+    while(i < arr1.length && j< arr2.length){          //loop through the array until the pointer reaches the end of the array
+        if(arr1[i] < arr2[j]){             //if the element in the first array is smaller than the element in the second array 
+            results.push(arr1[i]);          //push the element in the first array to the OUT array
             i++; //increment the pointer for the first array
         } else { //if the element in the second array is smaller than the element in the first array
             results.push(arr2[j]);//push the element in the second array to the OUT array
             j++;//increment the pointer for the second array
         }
     }
-    //when the pointer of one of the array reaches the end of the array, the rest of the second arraywill remain and will not be added
+    //When the pointer of one of the arrays reaches the end of the array, the rest of the second array will remain and will not be added
     //to OUT array. So we need to add the rest of the second array to the OUT array(and the first)
-    while(i<arr1.length){ //if the pointer for the first array is lessthan the length of the first array
+    while(i<arr1.length){ //if the pointer for the first array is less than the length of the first array
         results.push(arr1[i]); //push the element in the first array to the OUT array
         i++; //increment the pointer for the first array
     }
