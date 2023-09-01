@@ -22,15 +22,16 @@ insertionSort(nums); // [2, 3, 3, 4, 4, 4, 5, 23, 32, 32, 34,
 
 
 
-function insertionSort(arr) {//accepts an array
-    for(let i=0; i<arr.length; i++){ //loop through the array 
-        let currentValue = arr[i]; //store the current alement in a variable;
+function insertionSort(arr) {          //accepts an array
+    for(let i=0; i<arr.length; i++){  //loop through the array 
+        let currentValue = arr[i];   //store the current alement in a variable;
 
-        for(let j=i-1; j>-1 && arr[j]> currentValue; j--){ //[1,5,9,11,2,4,6,8,10] when i=0, j=0-1=-1, 
+        for(let j=i-1; j>-1 && arr[j]> currentValue; j--){       //[1,5,9,11,2,4,6,8,10] when i=0, j=0-1=-1, 
             //arr[-1] is undefined, arr[-1]>currentValue is false, so j=-1, j>-1 is false, so the loop is broken
-        //when i=1, j=1-1=0, arr[0]=1, arr[0]>currentValue is false, so j=0, j>-1 is true, so the loop is not broken
-        //when i=2, j=2-1=1, arr[1]=5, arr[1]>currentValue is false, so j=1, j>-1 is true, so the loop is not broken\\
-            arr[j+1] = arr[j]; //swap the current element with the previous element    
+           //when i=1, j=1-1=0, arr[0]=1, arr[0]>currentValue is false, so j=0, j>-1 is true, so the loop is not broken
+          //when i=2, j=2-1=1, arr[1]=5, arr[1]>currentValue is false, so j=1, j>-1 is true, so the loop is not broken
+            
+            arr[j+1] = arr[j];   //swap the current element with the previous element    
         }
     arr[j+1] = currentValue; 
     }
