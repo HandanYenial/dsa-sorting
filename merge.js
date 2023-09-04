@@ -67,16 +67,16 @@ let nums = [
 mergeSort(nums); // [2, 3, 3, 4, 4, 4, 5, 23, 32, 32, 34, 34, 35,
                  //  43, 67, 75, 232, 232, 453, 546, 4342] */
 function mergeSort(arr) {//it accepts an array
-    //basecase:when we have an array length of 0 or 1
+    //base-case:when we have an array length of 0 or 1
     if ( arr.length <=1 ) return arr;
-    //or not: then we need to split the array into two halves. For that I need a mid point
-    const midPoint = Math.floor( arr.length/2 ); //i needed math.floor because the mid point is not always a whole number
-    //now I'll split it to two arrays as left and right
+    //or not: then we need to split the array into two halves. For that, I need a midpoint
+    const midPoint = Math.floor( arr.length/2 ); //i needed math. floor because the midpoint is not always a whole number
+    //Now I'll split it into two arrays as left and right
     //then I'll mergeSort them
     const left = mergeSort(arr.slice(0,midPoint)); //slice the array from the beginning to the mid point
-    const right = mergeSort(arr.slice(midPoint)); //slice the array from the mid point to the end
+    const right = mergeSort(arr.slice(midPoint)); //slice the array from the midpoint to the end
 
-//then at the end I need to merge left and right by using merge function above
+//Then at the end I need to merge left and right by using the merge function above
     return merge(left,right);//return the merged array
 }
 
